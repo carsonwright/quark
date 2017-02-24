@@ -261,6 +261,8 @@ Quark.Promise = function(callback){
     return opts;
 }
 
-if(window && !window.Q){
+if(typeof window != "undefined" && !window.Q){
     window.Q = Quark;
+}else if(typeof module != "undefined"){
+    module.exports = Quark;
 }
