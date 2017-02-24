@@ -8,8 +8,6 @@
     <div id="qunit-fixture"></div>
     <script src="/index.js"></script>
     <script>
-        Q = mQuery().Q
-        _ = mQuery()._
         QUnit.module("Promise", function() {
             QUnit.test("Basic Sync Accept", function( assert ) {
                 var p = new Q.Promise(function(accept, reject){
