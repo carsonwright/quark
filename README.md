@@ -1,6 +1,6 @@
 # Quark
 
-A tool that mimicks some of jQuery and underscore in its functionality.
+A tool that mimicks a small amount of jQuery and underscore in its functionality, but is designed to be super modular so that you only have to include what you need.
 
 ### Selecting Something
 ```
@@ -83,3 +83,26 @@ Q(myData).try("hello.||create", {});
 Q(myData).try("hello.create.||chain", {});
 console.log(myData) // {hello:{create:{chain: {})
 ```
+
+
+### Includes
+
+Q(["a", "b"]).includes("a") // true
+
+Q("ab").includes("a") // true
+
+Q(["c", "b"]).includes("a") // false
+
+### isAny
+var data = [{a: true, b: false}, {a: false, b: true}];
+Q(data).isAny(function(test){ 
+  return test.b == true 
+}) // true
+
+Q(data).isAny(function(test){ 
+  return test.firstName == "Carson"
+}) // false
+
+
+### compact
+Q([null, "", undefined, "a", "b"]).compact() // ["a", "b"]
