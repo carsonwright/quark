@@ -86,14 +86,16 @@ console.log(myData) // {hello:{create:{chain: {})
 
 
 ### Includes
-
+```
 Q(["a", "b"]).includes("a") // true
 
 Q("ab").includes("a") // true
 
 Q(["c", "b"]).includes("a") // false
+```
 
 ### isAny
+```
 var data = [{a: true, b: false}, {a: false, b: true}];
 Q(data).isAny(function(test){ 
   return test.b == true 
@@ -102,7 +104,9 @@ Q(data).isAny(function(test){
 Q(data).isAny(function(test){ 
   return test.firstName == "Carson"
 }) // false
-
+```
 
 ### compact
+```
 Q([null, "", undefined, "a", "b"]).compact() // ["a", "b"]
+```
