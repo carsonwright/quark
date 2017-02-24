@@ -1,0 +1,11 @@
+<script src="/index.js"></script>
+<script>
+    p = Q.Promise(function(resolve, reject){
+        console.log("HIYA")
+        resolve("hi");
+    })
+    p.then(function(h){
+        console.log("FACE")
+        console.log(h)
+    })
+</script>
